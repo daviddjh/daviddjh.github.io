@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on David&#39;s Site</title>
-    <link>https://davidheadrick.dev/projects/</link>
-    <description>Recent content in Projects on David&#39;s Site</description>
+    <title>directx 12 on David&#39;s Site</title>
+    <link>https://davidheadrick.dev/tags/directx-12/</link>
+    <description>Recent content in directx 12 on David&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://davidheadrick.dev/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://davidheadrick.dev/tags/directx-12/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDX123</title>
       <link>https://davidheadrick.dev/projects/ddx123/</link>
