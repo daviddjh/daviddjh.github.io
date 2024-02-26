@@ -12,7 +12,7 @@
       <link>https://davidheadrick.dev/projects/ddx123/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://davidheadrick.dev/projects/ddx123/</guid>
-      <description>DDX123 is a realtime renderer I am writting using C++. The original goal of this project was to learn about the DirectX 12 API and how to use it.&#xA;Features: Forward and Deferred Shading pipelines Screen Space Ambient Occlusion Physically based lighting Photos: Screen Space Ambient Occlusion Shadow Mapping Deferred Rendering DDX123 uses the following 3rd party libraries:&#xA;imgui tinygltf DirectXTex DirectXTK12 DirectXShaderCompiler </description>
+      <description>DDX123 is a realtime renderer I am writting using C++. The original goal of this project was to learn about the DirectX 12 API and how to use it.&#xA;Features: Forward and Deferred Shading pipelines Screen Space Ambient Occlusion Physically based lighting Photos: DDX123 uses the following 3rd party libraries:&#xA;imgui tinygltf DirectXTex DirectXTK12 DirectXShaderCompiler </description>
     </item>
   </channel>
 </rss>

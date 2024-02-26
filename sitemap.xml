@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://davidheadrick.dev/posts/</loc>
+  </url><url>
     <loc>https://davidheadrick.dev/tags/c&#43;&#43;/</loc>
   </url><url>
     <loc>https://davidheadrick.dev/categories/</loc>
@@ -12,11 +14,11 @@
   </url><url>
     <loc>https://davidheadrick.dev/</loc>
   </url><url>
+    <loc>https://davidheadrick.dev/tags/ddx123/</loc>
+  </url><url>
     <loc>https://davidheadrick.dev/projects/ddx123/</loc>
   </url><url>
     <loc>https://davidheadrick.dev/tags/directx12/</loc>
-  </url><url>
-    <loc>https://davidheadrick.dev/posts/</loc>
   </url><url>
     <loc>https://davidheadrick.dev/projects/</loc>
   </url><url>
