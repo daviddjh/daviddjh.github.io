@@ -1,0 +1,89 @@
+---
+title: ReSTIR
+github: https://github.com/daviddjh/DDX123
+description: "Implementing ReSTIR into my toy renderer"
+tags: ["ddx123", "directx12", "renderer", "c++", "David Headrick"]
+type: post
+date: 2024-08-27T23:39:49+05:30
+---
+
+\#TODO
+
+---
+
+## Specular Reflections
+
+Going through chapter 9 of PBR book. Learing about TrowbridgeReitz Normal distribution and the Masking-Shadowing function.
+
+
+
+Geometry masking and Shadowing term
+
+Frensel
+
+Trowbridge-Reitz GGX normal distribution function
+- Describes distribution of normals
+- Describes distribution of normals given a wo aka visible normals.
+
+
+Considering 2 Types of Microfacet based BRDFs:
+- Torrance-Sparrow Conductor brdf, from PBR book
+- Cook-Torrance brdf, from LearnOpenGL.com
+
+Will start with PBR book to learn theory, then will move to Cook-Torrance.
+
+Looks like there's two versions of the Trowbridge-Reitz GGX NDF going around ( or two uses ).
+- PBR book uses it to determine the normal and a probablility for that normal, ( then reflect about the normal and determine a probablility for the wi)
+- LearnOpenGL.com uses it, but you need to come with your own normal and halfway vector, and the GGX function just gives you a probablility for the halfway fector
+	- This way sounds much faster, but how would you determine the halfway vector without a wi yet? PBR book uses the sampled normal to generate a wi.
+	
+After implementing the Torrance-Sparrow BRDF, I noticed a bug where the x direction of bounce rays were inverted. 
+
+[ Pic of bounce ray bug ]
+
+Pix has an awesome ability to view individual rays from a DispatchRays call. Here, we see the "bounce" ray direction is the exact inverse of the camera ray. Obviously a bug somewhere, the debug shader feature of pix helps out here
+
+lerp and LengthSqared were copied wrong from the book.
+
+TBN matrix multiplication order
+
+Need to work on lines on the screen
+
+Lines on the screen and final touches were fixed by fixing some vector space mismatches in vector math for tangent space vectors
+
+Now on to MIS of the diffuseBRDF and specular BRDF!
+
+I switched to Cook-Torrance BRDF with GGX Specular + Diffuse. When sampling wi, I 50/50 sample either diffuse distribution or GGX distribution.
+
+Implemented Textured normals. Had an issue with Tangent Handidness, now thats fixed.
+
+Now need to figure out why specular looks so bright...
+
+Was super bright because of a math error in TR_D
+
+Implemented the "Improved Path tracer" from PBR book. This includes MIS and Russian Roulette.
+
+recursion_depth < 3
+
+Improved PT w/ RR = 45ms
+Improved PT w/o RR = 66ms
+Simple PT = 67ms
+
+Read "Spatiotemporal reservoir resampling for real-time ray tracing with dynamic direct lighting" and took notes
+Read "ReSTIR GI: Path Resampling for Real-Time Path Tracing" and took notes
+Read "An Efficient Method for Generating Discrete Random Variables With General Distributions" and took notes.
+
+Along the way, I setup Zotero and a local Webdav server to keep track of the papers and notes.
+
+Started implementing restir. for now, it's a seperate pass from DXR ray tracing. It also has it's own shader file.
+
+I created new shader include files: math, utils, and bxdf to host shared code amoung dxr path tracing shader and restir shader.
+
+Had an issue with temporal resampling... I was reading from the temporal buffer at one pixel, and writing at another pixel all in the same pass.
+This caused out of order reads and writes, which caused artifacts on the screen.
+
+This was fixed by reading from different pixels on the temporal pass, then writing the final "history" reservoir on the spacial pass, with a barrier in between to ensure all memory reads are complete.
+
+Render samples are comming back wrong between verticies...?
+
+These rays are all supposed to be RISing a bright light, sooo, why aren't they casting a ray towards a bright light? Nearly all of them go into the geo
