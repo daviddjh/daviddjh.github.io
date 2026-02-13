@@ -4,7 +4,7 @@
     <title>All Posts on David&#39;s Site</title>
     <link>https://davidheadrick.dev/posts/</link>
     <description>Recent content in All Posts on David&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://davidheadrick.dev/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>

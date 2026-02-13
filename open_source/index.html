@@ -17,25 +17,25 @@
     
 
     
-    <title>C&#43;&#43;</title>
+    <title>Open Source</title>
     <meta name="description" content="Feel free to take a look around 👀">
     <meta name="keywords" content='david, headrick, blog, daviddjh, hugo'>
 
-    <meta property="og:url" content="https://davidheadrick.dev/tags/c&#43;&#43;/">
+    <meta property="og:url" content="https://davidheadrick.dev/open_source/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="C&#43;&#43;">
+    <meta property="og:title" content="Open Source">
     <meta property="og:description" content="Feel free to take a look around 👀">
     <meta property="og:image" content="/images/DavidHeadrickPic.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="C&#43;&#43;">
+    <meta name="twitter:title" content="Open Source">
     <meta name="twitter:description" content="Feel free to take a look around 👀">
-    <meta property="twitter:domain" content="https://davidheadrick.dev/tags/c&#43;&#43;/">
-    <meta property="twitter:url" content="https://davidheadrick.dev/tags/c&#43;&#43;/">
+    <meta property="twitter:domain" content="https://davidheadrick.dev/open_source/">
+    <meta property="twitter:url" content="https://davidheadrick.dev/open_source/">
     <meta name="twitter:image" content="/images/DavidHeadrickPic.webp">
 
     
-    <link rel="canonical" href="https://davidheadrick.dev/tags/c&#43;&#43;/" />
+    <link rel="canonical" href="https://davidheadrick.dev/open_source/" />
 
     <link rel="stylesheet" type="text/css" href="https://davidheadrick.dev//css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://davidheadrick.dev//css/main.css">
@@ -136,13 +136,37 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
 
-    <h1 class="list-title">c&#43;&#43;</h2>
+    <div class="post-header-section">
+        <h1>Open Source</h1>
+        
+    </div>
 
+    <div class="post-content">
+        <p>
+            <h3 id="mesa--dozen--vk_ext_memory_budget-merged-feb-2026">Mesa / Dozen — VK_EXT_memory_budget (Merged Feb 2026)</h3>
+<ul>
+<li><strong>What:</strong> Implemented <code>VK_EXT_memory_budget</code> support to Mesa Dozen driver.</li>
+<li><strong>Impact:</strong> Enables Vulkan apps to query memory budgets via the Vulkan extension API.</li>
+<li><strong>Skills:</strong> Vulkan, Mesa driver stack, upstream reviews, debugging/validation</li>
+<li><a href="https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/39855">Merge Request</a></li>
+</ul>
+<h3 id="ispc--faster-packed_load_store2-on-avx2-i32x8-merged-mar-2025">ISPC — Faster packed_load_store2 on AVX2 i32x8 (Merged Mar 2025)</h3>
+<ul>
+<li><strong>What:</strong> Improved performance of packed_load_store2 for the AVX2 i32x8 target by removing util.m4 macro usage in target-avx2-common-i32x8.ll and replacing it with faster custom implementations (initially for __packed_store_active2i32 / __packed_store_active2i64).</li>
+<li><strong>Impact:</strong> Speeds up common “packed store active lanes” patterns used by ISPC’s vectorized codegen/runtime paths on AVX2, backed by benchmark comparisons in the PR discussion.</li>
+<li><strong>How:</strong> Implementations were based on an algorithm referenced from a StackOverflow discussion, then iterated through review feedback and portability fixes.</li>
+<li><strong>Fixes/compat:</strong> Resolved x86 test failures by switching from 64-bit PDEP (not encodable on x86) to a 32-bit PDEP approach so it works on both x86 and x86-64.</li>
+<li><strong>Skills:</strong> SIMD, AVX2, LLVM IR, compiler builtins, performance optimization, x86</li>
+<li><a href="https://github.com/ispc/ispc/pull/3275">PR #3275 Merged to ispc:main</a></li>
+</ul>
+
+        </p>
+    </div>
     
-
 </div>
+
 
 
         </main><footer class="footer">

@@ -4,7 +4,7 @@
     <title>Projects on David&#39;s Site</title>
     <link>https://davidheadrick.dev/projects/</link>
     <description>Recent content in Projects on David&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://davidheadrick.dev/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://davidheadrick.dev/projects/ddx123/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://davidheadrick.dev/projects/ddx123/</guid>
-      <description>DDX123 is a realtime renderer I am writting using C++. The original goal of this project was to learn about the DirectX 12 API and how to use it.&#xA;Features: Forward and Deferred Shading pipelines Screen Space Ambient Occlusion Physically based lighting Path Tracer ReSTIR DI Photos: ReSTIR DI: Path Tracing: Deferred Shading: DDX123 uses the following 3rd party libraries:&#xA;imgui tinygltf DirectXTex DirectXTK12 DirectXShaderCompiler </description>
+      <description>&lt;p&gt;DDX123 is a realtime renderer I am writting using C++. The original goal of this project was to learn about the DirectX 12 API and how to use it.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;features&#34;&gt;Features:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Forward and Deferred Shading pipelines&lt;/li&gt;&#xA;&lt;li&gt;Screen Space Ambient Occlusion&lt;/li&gt;&#xA;&lt;li&gt;Physically based lighting&lt;/li&gt;&#xA;&lt;li&gt;Path Tracer&lt;/li&gt;&#xA;&lt;li&gt;ReSTIR DI&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;photos&#34;&gt;Photos:&lt;/h2&gt;&#xA;&lt;h3 id=&#34;restir-di&#34;&gt;ReSTIR DI:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/ReSTIR_Final_1.webp&#34; alt=&#34;ReSTIR_Final_1&#34; title=&#34;ReSTIR DI #1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/ReSTIR_Final_2.webp&#34; alt=&#34;ReSTIR_Final_2&#34; title=&#34;ReSTIR DI #2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/ReSTIR_Final_3.webp&#34; alt=&#34;ReSTIR_Final_3&#34; title=&#34;ReSTIR DI #3&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/ReSTIR_Final_4.webp&#34; alt=&#34;ReSTIR_Final_4&#34; title=&#34;ReSTIR DI #4&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;path-tracing&#34;&gt;Path Tracing:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/Path_Tracing_Final_1.webp&#34; alt=&#34;Path_Tracing_Final_1&#34; title=&#34;Path Tracing #1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/Path_Tracing_Final_2.webp&#34; alt=&#34;Path_Tracing_Final_2&#34; title=&#34;Path Tracing #2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://davidheadrick.dev/images/Path_Tracing_Final_3.webp&#34; alt=&#34;Path_Tracing_Final_3&#34; title=&#34;Path Tracing #3&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
